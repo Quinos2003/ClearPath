@@ -15,9 +15,23 @@ const Script = () => {
       });
   };
 
+  const stopScript = () => {
+    axios
+      .post("http://localhost:5000/stop-script")
+      .then((response) => {
+        console.log(response.data.message);
+        // Handle success message
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle error message
+      });
+  };
+
   return (
     <div>
-      <button onClick={runScript}>Run Python Script</button>;
+      <button onClick={runScript}>Run Python Script</button>
+      <button onClick={stopScript}>Stop Python Script</button>
     </div>
   );
 };

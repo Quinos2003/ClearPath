@@ -4,6 +4,7 @@ import urllib.request
 from werkzeug.utils import secure_filename
 from flask_cors import CORS 
 import subprocess
+import psutil
  
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -75,7 +76,17 @@ def run_script():
         subprocess.run(['python3', 'vehicles.py'], check=True)
         return jsonify({'message': 'Script executed successfully'})
     except subprocess.CalledProcessError as e:
-        return jsonify({'message': 'Error executing script'})
+        return jsonify({'message': 'Video Not Found or Script already running'})
+
+@app.route('/stop-script', methods=['POST'])
+def stop_script():
+    for proc in psutil.process_iter():
+        if "vehicles.py" in proc.cmdline():
+            proc.terminate()
+            return jsonify({'message': 'Script stopped successfully'})
+    
+    return jsonify({'message': 'Script not found or already stopped'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
