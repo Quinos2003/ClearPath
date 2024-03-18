@@ -81,47 +81,10 @@ const About = ({ isLoggedIn }) => {
         <div className="text-3xl text-center my-10 font-bold">
           Meet the minds behind ClearPath
         </div>
-        <div className="text-2xl text-center my-4 font-bold">Team Lead</div>
-        <div>
-          <div className="flex flex-wrap justify-center m-4">
-            <div className="flex-col m-10 max-w-lg border-4 rounded-3xl">
-              <img
-                src="https://avatars.githubusercontent.com/u/72240452?v=4"
-                alt="profile image"
-                width={100}
-                height={100}
-                loading="lazy"
-                className="rounded-full my-2 mx-auto"
-              />
-              <div className="text-4xl my-2 text-center font-semibold">
-                Samarth Asthana
-              </div>
-              <div className="text-2xl my-2 text-center font-medium">AI/ML</div>
-              <div className="text-lg m-4 text-center w-72 font-medium ">
-                PhD University of Colorado, USA. Expert in mathematical modeling
-                with more than 20 years of research and development experience
-                in worldclass research organizations both in India and the USA.
-              </div>
-              <div>
-                <Link to="https://www.linkedin.com/in/samarth-asthana/">
-                  <img
-                    src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                    alt="LinkedIn Icon"
-                    width={50}
-                    height={50}
-                    loading="lazy"
-                    className="my-2 mx-auto"
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="text-2xl text-center my-4 font-bold">Team Members</div>
         <div className="flex flex-wrap justify-center m-4">
           <div className="flex-col m-10 max-w-xl border-4 rounded-3xl">
             <img
-              src="https://media.licdn.com/dms/image/D4D03AQFkKdHGv2S2VQ/profile-displayphoto-shrink_400_400/0/1701117745768?e=1715817600&v=beta&t=U71hS-LqMvZPPceUK5L-GpOAtIxkcPmGLftfHw3kwgs"
+              src="https://avatars.githubusercontent.com/u/72240452?v=4"
               alt="profile image"
               width={100}
               height={100}
@@ -129,16 +92,18 @@ const About = ({ isLoggedIn }) => {
               className="rounded-full my-2 mx-auto"
             />
             <div className="text-4xl my-2 text-center font-semibold">
-              Arihant Bharadwaj
+              Samarth Asthana
             </div>
-            <div className="text-2xl my-2 text-center font-medium">AI/ML</div>
-            <div className="text-lg m-4 text-center w-72 font-medium ">
+            <div className="text-2xl mx-4 text-center font-medium">
+              ML and Backend Enthusiast
+            </div>
+            <div className="text-lg text-center mx-auto my-2 w-72 font-medium ">
               PhD University of Colorado, USA. Expert in mathematical modeling
               with more than 20 years of research and development experience in
               worldclass research organizations both in India and the USA.
             </div>
             <div>
-              <Link to="https://www.linkedin.com/in/arihant-bharadwaj-434b22226/">
+              <Link to="https://www.linkedin.com/in/samarth-asthana/">
                 <img
                   src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
                   alt="LinkedIn Icon"
@@ -162,45 +127,16 @@ const About = ({ isLoggedIn }) => {
             <div className="text-4xl my-2 text-center font-semibold">
               Kartik Agarwal
             </div>
-            <div className="text-2xl my-2 text-center font-medium">AI/ML</div>
-            <div className="text-lg m-4 text-center w-72 font-medium ">
+            <div className="text-2xl mx-4 text-center font-medium">
+              UI/UX and Frontend Developer
+            </div>
+            <div className="text-lg text-center mx-auto my-2 w-72 font-medium ">
               PhD University of Colorado, USA. Expert in mathematical modeling
               with more than 20 years of research and development experience in
               worldclass research organizations both in India and the USA.
             </div>
             <div>
               <Link to="https://www.linkedin.com/in/kartikhustles/">
-                <img
-                  src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                  alt="LinkedIn Icon"
-                  width={50}
-                  height={50}
-                  loading="lazy"
-                  className="my-2 mx-auto"
-                />
-              </Link>
-            </div>
-          </div>
-          <div className="flex-col m-10 max-w-xl border-4 rounded-3xl">
-            <img
-              src="https://media.licdn.com/dms/image/D5603AQHpwmMKKaS2KA/profile-displayphoto-shrink_400_400/0/1666546297158?e=1715817600&v=beta&t=rQILomXLfjrHOydfrRl5fC3gA5KYWFreOxzgoQWKS-M"
-              alt="profile image"
-              width={100}
-              height={100}
-              loading="lazy"
-              className="rounded-full my-2 mx-auto"
-            />
-            <div className="text-4xl my-2 text-center font-semibold">
-              Ayush Patil
-            </div>
-            <div className="text-2xl my-2 text-center font-medium">AI/ML</div>
-            <div className="text-lg m-4 text-center w-72 font-medium ">
-              PhD University of Colorado, USA. Expert in mathematical modeling
-              with more than 20 years of research and development experience in
-              worldclass research organizations both in India and the USA.
-            </div>
-            <div>
-              <Link to="https://www.linkedin.com/in/ayushp2948/">
                 <img
                   src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
                   alt="LinkedIn Icon"

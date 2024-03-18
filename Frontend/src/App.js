@@ -42,11 +42,19 @@ function App() {
         />
         <Route
           path="/vehiclecount"
-          element={<VehicleCount setIsLoggedIn={setIsLoggedIn} />}
+          element={
+            <PrivateRoute isLoggedIn={isLoggedIn}>
+              <VehicleCount />
+            </PrivateRoute>
+          }
         />
         <Route
           path="/simulator"
-          element={<Simulator setIsLoggedIn={setIsLoggedIn} />}
+          element={
+            <PrivateRoute isLoggedIn={isLoggedIn}>
+              <Simulator />
+            </PrivateRoute>
+          }
         />
         <Route
           path="/dashboard"
