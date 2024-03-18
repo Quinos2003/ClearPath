@@ -220,4 +220,19 @@ __pycache__/
 local_settings.py
 
 .env
+.venv
+venv
+env
 db.sqlite3
+
+### Flask ###
+.idea/
+.vscode/
+__pycache__/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+docs/_build/
+dist/
+venv/
