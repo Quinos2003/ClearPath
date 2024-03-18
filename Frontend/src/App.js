@@ -12,7 +12,8 @@ import { useEffect, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute";
 import ImageUpload from "./components/ImageUpload";
 import Traffic from "./pages/Traffic.js";
-import Script from "./components/Script.js";
+import VehicleCount from "./components/VehicleCount.js";
+import Simulator from "./components/Simulator.js";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,7 +42,11 @@ function App() {
         />
         <Route
           path="/vehiclecount"
-          element={<Script setIsLoggedIn={setIsLoggedIn} />}
+          element={<VehicleCount setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route
+          path="/simulator"
+          element={<Simulator setIsLoggedIn={setIsLoggedIn} />}
         />
         <Route
           path="/dashboard"
