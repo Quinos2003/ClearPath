@@ -3,6 +3,7 @@ import os
 import urllib.request
 from werkzeug.utils import secure_filename
 from flask_cors import CORS 
+import subprocess
  
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -67,6 +68,14 @@ def upload_file():
         resp = jsonify(errors)
         resp.status_code = 500
         return resp
- 
+    
+@app.route('/run-script', methods=['POST'])
+def run_script():
+    try:
+        subprocess.run(['python3', 'vehicles.py'], check=True)
+        return jsonify({'message': 'Script executed successfully'})
+    except subprocess.CalledProcessError as e:
+        return jsonify({'message': 'Error executing script'})
+
 if __name__ == '__main__':
     app.run(debug=True)
