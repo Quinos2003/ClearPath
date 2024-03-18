@@ -13,9 +13,6 @@ class Organization(models.Model):
     is_active = models.BooleanField(default=True)
     is_deleted = models.BooleanField(default=False)
     deleted_at = models.DateTimeField(null=True, blank=True)
-    created_by = models.ForeignKey('users.User', related_name='organization_created_by', on_delete=models.CASCADE)
-    updated_by = models.ForeignKey('users.User', related_name='organization_updated_by', on_delete=models.CASCADE)
-    deleted_by = models.ForeignKey('users.User', related_name='organization_deleted_by', on_delete=models.CASCADE, null=True, blank=True)
 
     # Additional Fields
     email = models.EmailField(max_length=254)
