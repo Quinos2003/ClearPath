@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "coffeescript": "^2.7.0",
     "tailwindcss": "^3.2.7"
   }
 }
