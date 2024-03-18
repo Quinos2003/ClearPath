@@ -98,9 +98,12 @@ const About = ({ isLoggedIn }) => {
               ML and Backend Enthusiast
             </div>
             <div className="text-lg text-center mx-auto my-2 w-72 font-medium ">
-              PhD University of Colorado, USA. Expert in mathematical modeling
-              with more than 20 years of research and development experience in
-              worldclass research organizations both in India and the USA.
+              As a Research and Development Engineer Intern at Logy.AI®, he
+              automated user data analytics with Django and SQL. At Pocket FM,
+              he led A/B experiments, conducted load testing, and implemented
+              user retention strategies. Additionally, he developed Python
+              scripts for Colgate Kenya and implemented Django-based bots for
+              health screenings.
             </div>
             <div>
               <Link to="https://www.linkedin.com/in/samarth-asthana/">
@@ -131,9 +134,12 @@ const About = ({ isLoggedIn }) => {
               UI/UX and Frontend Developer
             </div>
             <div className="text-lg text-center mx-auto my-2 w-72 font-medium ">
-              PhD University of Colorado, USA. Expert in mathematical modeling
-              with more than 20 years of research and development experience in
-              worldclass research organizations both in India and the USA.
+              SWE Intern '24 at Microsoft and pre-final-year student VIT.
+              Passionate about developing, designing, and technical tasks.
+              Hustling to solve real-world problems, currently learning Flutter,
+              Dart, MERN Stack, Java Full Stack, Data Structures, and UX Design.
+              Determined to add value to the world, loves connecting with new
+              people.
             </div>
             <div>
               <Link to="https://www.linkedin.com/in/kartikhustles/">

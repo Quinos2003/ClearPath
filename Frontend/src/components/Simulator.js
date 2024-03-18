@@ -1,5 +1,7 @@
 import axios from "axios";
 import React from "react";
+import "./Button/StopScript.css";
+import "./Button/StartScript.css";
 
 const Simulator = () => {
   const runScript = () => {
@@ -29,9 +31,20 @@ const Simulator = () => {
   };
 
   return (
-    <div>
-      <button onClick={runScript}>Run Python Script</button>
-      <button onClick={stopScript}>Stop Python Script</button>
+    <div className="h-full">
+      <div className="text-4xl font-bold text-center mt-32">
+        Vehicle Count Simulation
+      </div>
+      <div className="flex mt-20">
+        <div className="flex mx-auto my-auto">
+          <button onClick={runScript} class="mx-20 button-50" role="button">
+            Run
+          </button>
+          <button onClick={stopScript} class="mx-20 button-49" role="button">
+            Stop
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
