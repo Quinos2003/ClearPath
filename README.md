@@ -20,11 +20,6 @@ To get started with ClearPath, please follow the installation instructions below
 
 ### Installation
 
-1. **Download the ClearPath package**: Clone this repository to your local machine or download the zip file.
-   ```bash
-   git clone https://github.com/Quinos2003/ClearPath
-    ```
-
 1. **Download the ClearPath package**: Clone this repository to your local
    machine or download the zip file.
 
@@ -36,18 +31,11 @@ To get started with ClearPath, please follow the installation instructions below
    required dependencies.
 
    ```bash
-   cd ClearPath
-   npm install
+   cd Frontend
+   npm i
    ```
 
-3. **Set up configuration**: Configure the ClearPath system according to your
-   specific urban environment and requirements.
-
-   ```bash
-   cp config.example.json config.json
-   ```
-
-4. **Run the system**: Start the ClearPath system to begin optimizing traffic
+3. **Run the frontend file**: Start the ClearPath system to begin optimizing traffic
    flow and prioritizing emergency vehicle response.
 
    ```bash
