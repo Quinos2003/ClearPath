@@ -10,6 +10,7 @@ import Contact from "./pages/Contact.js";
 import Dashboard from "./pages/Dashboard";
 import { useEffect, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute";
+import ImageUpload from "./components/ImageUpload";
 import Traffic from "./pages/Traffic.js";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           path="/signup"
           element={<Signup setIsLoggedIn={setIsLoggedIn} />}
         />
+        <Route exact path="/upload-image" element={<ImageUpload />} />
         <Route path="/about" element={<About isLoggedIn={isLoggedIn} />} />
         <Route path="/contact" element={<Contact isLoggedIn={isLoggedIn} />} />
         <Route
