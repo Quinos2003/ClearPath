@@ -33,7 +33,7 @@ const Simulator = () => {
   return (
     <div className="h-full">
       <div className="text-4xl font-bold text-center mt-32">
-        Vehicle Count Simulation
+        Traffic Simulation
       </div>
       <div className="flex mt-20">
         <div className="flex mx-auto my-auto">
