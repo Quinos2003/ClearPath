@@ -1,40 +1,36 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import "./Button/StartScript.css";
 
-export default class ImageUpload extends Component {
-  constructor(props) {
-    super(props);
+export default function ImageUpload() {
+  const [image, setImage] = React.useState("");
+  const [responseMsg, setResponseMsg] = React.useState({
+    status: "",
+    message: "",
+    error: "",
+  });
 
-    this.state = {
-      image: "",
-      responseMsg: {
-        status: "",
-        message: "",
-        error: "",
-      },
-    };
-  }
+  const navigate = useNavigate(); // Initialize navigate hook for redirection
 
   // image onchange hander
-  handleChange = (e) => {
+  const handleChange = (e) => {
     const imagesArray = [];
 
     for (let i = 0; i < e.target.files.length; i++) {
-      this.fileValidate(e.target.files[i]);
+      fileValidate(e.target.files[i]);
       imagesArray.push(e.target.files[i]);
     }
-    this.setState({
-      image: imagesArray,
-    });
+    setImage(imagesArray);
   };
 
   // submit handler
-  submitHandler = (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     const data = new FormData();
-    for (let i = 0; i < this.state.image.length; i++) {
-      data.append("files[]", this.state.image[i]);
+    for (let i = 0; i < image.length; i++) {
+      data.append("files[]", image[i]);
     }
 
     axios
@@ -42,23 +38,20 @@ export default class ImageUpload extends Component {
       .then((response) => {
         console.log(response);
         if (response.status === 201) {
-          this.setState({
-            responseMsg: {
-              status: response.data.status,
-              message: response.data.message,
-            },
+          setResponseMsg({
+            status: response.data.status,
+            message: response.data.message,
           });
           setTimeout(() => {
-            this.setState({
-              image: "",
-              responseMsg: "",
-            });
+            setImage("");
+            setResponseMsg("");
           }, 100000);
 
           document.querySelector("#imageForm").reset();
+          alert("Successfully Uploaded");
+          toast.success("Successfully Uploaded");
+          navigate("/vehiclecount"); // Redirect to /vehiclecount after successful upload
         }
-        alert("Successfully Uploaded");
-        toast.success("Successfully Uploaded");
       })
       .catch((error) => {
         console.error(error);
@@ -72,73 +65,69 @@ export default class ImageUpload extends Component {
   };
 
   // file validation
-  fileValidate = (file) => {
+  const fileValidate = (file) => {
     if (file.type === "image/mp4") {
-      this.setState({
-        responseMsg: {
-          error: "",
-        },
+      setResponseMsg({
+        error: "",
       });
       return true;
     } else {
-      this.setState({
-        responseMsg: {
-          error: "File type allowed only mp4",
-        },
+      setResponseMsg({
+        error: "",
       });
       return false;
     }
   };
 
-  render() {
-    return (
-      <div className="py-5">
-        <div className="">
-          <div className="col-lg-12">
-            <form
-              onSubmit={this.submitHandler}
-              encType="multipart/form-data"
-              id="imageForm"
-            >
+  return (
+    <div className="flex h-full my-24">
+      <div className="flex mx-auto">
+        <div className="col-lg-12">
+          <form
+            onSubmit={submitHandler}
+            encType="multipart/form-data"
+            id="imageForm"
+          >
+            <div className="flex-col">
+              {responseMsg.status === "successs" ? (
+                <div className="">{responseMsg.message}</div>
+              ) : responseMsg.status === "failed" ? (
+                <div className="">{responseMsg.message}</div>
+              ) : (
+                ""
+              )}
+              <div className="flex">
+                <h4 className="flex text-center m-4 text-4xl font-semibold">
+                  Kindly Upload the video
+                </h4>
+              </div>
+
               <div className="">
-                {this.state.responseMsg.status === "successs" ? (
-                  <div className="">{this.state.responseMsg.message}</div>
-                ) : this.state.responseMsg.status === "failed" ? (
-                  <div className="">{this.state.responseMsg.message}</div>
-                ) : (
-                  ""
-                )}
                 <div className="">
-                  <h4 className="">
-                    React-JS and Python Flask Multiple Image Upload with
-                    validation
-                  </h4>
-                </div>
-
-                <div className="">
-                  <div className="py-2">
-                    <label htmlFor="images">Images</label>
-                    <input
-                      type="file"
-                      name="image"
-                      multiple
-                      onChange={this.handleChange}
-                      className=""
-                    />
-                    <span className="">{this.state.responseMsg.error}</span>
-                  </div>
-                </div>
-
-                <div className="">
-                  <button type="submit" className="btn">
-                    Upload
-                  </button>
+                  <input
+                    type="file"
+                    name="image"
+                    multiple
+                    onChange={handleChange}
+                    className="my-4 text-xl font-semibold"
+                  />
+                  <span className="">{responseMsg.error}</span>
                 </div>
               </div>
-            </form>
-          </div>
+
+              <div className="">
+                <button
+                  type="submit"
+                  class="mx-20 my-4 button-50"
+                  role="button"
+                >
+                  Run
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }

@@ -33,7 +33,7 @@ function App() {
           path="/signup"
           element={<Signup setIsLoggedIn={setIsLoggedIn} />}
         />
-        <Route exact path="/upload-image" element={<ImageUpload />} />
+        <Route exact path="/upload-video" element={<ImageUpload />} />
         <Route path="/about" element={<About isLoggedIn={isLoggedIn} />} />
         <Route path="/contact" element={<Contact isLoggedIn={isLoggedIn} />} />
         <Route
