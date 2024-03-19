@@ -8,7 +8,7 @@ import Signup from "./pages/Signup";
 import About from "./pages/About";
 import Contact from "./pages/Contact.js";
 import Dashboard from "./pages/Dashboard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PrivateRoute from "./components/PrivateRoute";
 import ImageUpload from "./components/ImageUpload";
 import Traffic from "./pages/Traffic.js";

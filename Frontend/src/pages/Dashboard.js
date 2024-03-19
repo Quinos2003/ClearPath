@@ -1,7 +1,6 @@
 import React from "react";
 import CoolButton from "../components/Button/CoolButton";
 import { Link } from "react-router-dom";
-import VideoUploader from "../components/VideoUploadForm";
 
 const Dashboard = () => {
   return (
