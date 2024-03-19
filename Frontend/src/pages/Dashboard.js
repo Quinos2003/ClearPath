@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="h-full my-32">
       <div className="my-12">
-        <Link to="/vehiclecount">
+        <Link to="/upload-video">
           <CoolButton text={"Vehicle Count"} />
         </Link>
       </div>
