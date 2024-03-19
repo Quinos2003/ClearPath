@@ -1,11 +1,11 @@
 import React from "react";
 import "./CoolButton.css";
 
-const CoolButton = () => {
+const CoolButton = ({ text }) => {
   return (
     <div class="wrapper">
       <a class="cta" href="#">
-        <span>Lets Clear the Path</span>
+        <span>Lets start the {text}</span>
         <span>
           <svg
             width="66px"

@@ -5,10 +5,17 @@ import VideoUploader from "../components/VideoUploadForm";
 
 const Dashboard = () => {
   return (
-    <div className="flex justify-center items-center text-3xl h-full">
-      <Link to="/vehiclecount">
-        <CoolButton />
-      </Link>
+    <div className="h-full my-32">
+      <div className="my-12">
+        <Link to="/vehiclecount">
+          <CoolButton text={"Vehicle Count"} />
+        </Link>
+      </div>
+      <div>
+        <Link to="/simulator">
+          <CoolButton text={"Simulator"} />
+        </Link>
+      </div>
     </div>
   );
 };
