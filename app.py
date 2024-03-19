@@ -78,6 +78,14 @@ def run_script():
     except subprocess.CalledProcessError as e:
         return jsonify({'message': 'Video Not Found or Script already running'})
 
+@app.route('/run-script-simulation', methods=['POST'])
+def run_script_simulation():
+    try:
+        subprocess.run(['python3', 'simulation.py'], check=True)
+        return jsonify({'message': 'Script executed successfully'})
+    except subprocess.CalledProcessError as e:
+        return jsonify({'message': 'Video Not Found or Script already running'})
+
 @app.route('/stop-script', methods=['POST'])
 def stop_script():
     for proc in psutil.process_iter():

@@ -6,7 +6,7 @@ import "./Button/StartScript.css";
 const Simulator = () => {
   const runScript = () => {
     axios
-      .post("http://localhost:5000/run-script")
+      .post("http://localhost:5000/run-script-simulation")
       .then((response) => {
         console.log(response.data.message);
         // Handle success message
@@ -37,10 +37,10 @@ const Simulator = () => {
       </div>
       <div className="flex mt-20">
         <div className="flex mx-auto my-auto">
-          <button onClick={runScript} class="mx-20 button-50" role="button">
+          <button onClick={runScript} className="mx-20 button-50" role="button">
             Run
           </button>
-          <button onClick={stopScript} class="mx-20 button-49" role="button">
+          <button onClick={stopScript} className="mx-20 button-49" role="button">
             Stop
           </button>
         </div>
