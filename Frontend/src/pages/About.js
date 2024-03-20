@@ -95,7 +95,7 @@ const About = ({ isLoggedIn }) => {
               Samarth Asthana
             </div>
             <div className="text-2xl mx-4 text-center font-medium">
-              ML and Backend Enthusiast
+              Backend and ML Enthusiast
             </div>
             <div className="text-lg text-center mx-auto my-2 w-72 font-medium ">
               As a Research and Development Engineer Intern at Logy.AI®, he
@@ -120,7 +120,7 @@ const About = ({ isLoggedIn }) => {
           </div>
           <div className="flex-col m-10 max-w-xl border-4 rounded-3xl">
             <img
-              src="https://media.licdn.com/dms/image/D5603AQEhNMVMyXjmqw/profile-displayphoto-shrink_400_400/0/1679211683920?e=1715817600&v=beta&t=54342nMjQPA_Mo6XECvsGvGHsEpTetRKPmPbDklmWkQ"
+              src="https://avatars.githubusercontent.com/u/103099845?v=4"
               alt="profile image"
               width={100}
               height={100}
